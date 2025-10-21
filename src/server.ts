@@ -1,12 +1,16 @@
-console.log('hello from server.js');
-console.log('hello from server.js 2');
+import { Config } from './config/index.ts';
+import app from './app.ts';
 
-function name(name: string) {
-  const naam = {
-    fname: 'Gokul',
-    lname: 'Modi',
-  };
+const startServer = () => {
+  const PORT = Config.PORT;
+  try {
+    app.listen(PORT, () => {
+      console.log(`Server is running on port ${PORT}`);
+    });
+  } catch (error) {
+    console.error('Error starting the server:', error);
+    process.exit(1);
+  }
+};
 
-  return `Hello, ${name} ${naam.fname}!`;
-}
-name('GOkul');
+startServer();

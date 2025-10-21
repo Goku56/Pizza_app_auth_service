@@ -1,26 +1,30 @@
 {
-  "name": "auth-service",
-  "version": "1.0.0",
-  "description": "The user management service",
-  "main": "index.js",
-  "scripts": {
-    "dev": "node src/server.js",
-    "format:fix": "prettier . --write",
-    "format:check": "prettier . --check",
-    "lint:fix": "eslint . --ext .ts --fix",
-    "lint:check": "eslint . --ext .ts",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky"
-  },
-  "author": "Gokul",
-  "license": "ISC",
-  "devDependencies": {
-    "@eslint/js": "^9.38.0",
-    "@types/node": "^24.8.1",
-    "eslint": "^9.38.0",
-    "husky": "^9.1.7",
-    "prettier": "3.6.2",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.46.2"
-  }
+    "name": "auth-service",
+    "version": "1.0.0",
+    "description": "The user management service",
+    "main": "index.js",
+    "scripts": {
+        "dev": "node src/server.js",
+        "format:fix": "prettier . --write",
+        "format:check": "prettier . --check",
+        "lint:fix": "eslint . --ext .ts --fix",
+        "lint:check": "eslint . --ext .ts",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "prepare": "husky"
+    },
+    "author": "Gokul",
+    "license": "ISC",
+    "devDependencies": {
+        "@eslint/js": "^9.38.0",
+        "@types/node": "^24.8.1",
+        "eslint": "^9.38.0",
+        "husky": "^9.1.7",
+        "lint-staged": "^16.2.5",
+        "prettier": "3.6.2",
+        "typescript": "^5.9.3",
+        "typescript-eslint": "^8.46.2"
+    },
+    "lint-staged": {
+        "*.ts": ["npm run format:fix", "npm run lint:fix"]
+    }
 }

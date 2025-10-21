@@ -12,11 +12,17 @@ export default defineConfig(
 
     },
     {
-        languageOptions: { 
+        languageOptions: {
             parserOptions: {
                 projectService: true,
                 tsconfigRootDir: import.meta.dirname
             },
         },
     },
+    {
+        rules: {
+            'no-console': 'off',
+            'dot-notation': 'error',
+        }
+    }
 );

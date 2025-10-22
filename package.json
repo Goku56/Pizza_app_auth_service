@@ -9,16 +9,18 @@
     "format:check": "prettier . --check",
     "lint:fix": "eslint . --ext .ts --fix",
     "lint:check": "eslint . --ext .ts",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "prepare": "husky"
   },
   "author": "Gokul",
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^9.38.0",
+    "@types/jest": "^30.0.0",
     "@types/node": "^24.8.1",
     "eslint": "^9.38.0",
     "husky": "^9.1.7",
+    "jest": "^30.2.0",
     "lint-staged": "^16.2.5",
     "nodemon": "^3.1.10",
     "prettier": "3.6.2",
@@ -34,8 +36,10 @@
   },
   "dependencies": {
     "@types/express": "^5.0.3",
+    "@types/http-errors": "^2.0.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
+    "http-errors": "^2.0.0",
     "winston": "^3.18.3"
   }
 }
